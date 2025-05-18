@@ -17,9 +17,6 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://Hilton:hilton@cluster
   .catch((err) => console.error('MongoDB connection error:', err));
 
 // Routes
-app.get('/', (req, res) => {
-  res.send('API is running...');
-});
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/habits', require('./routes/habits'));
 app.use('/api/analytics', require('./routes/analytics'));
